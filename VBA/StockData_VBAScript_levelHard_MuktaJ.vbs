@@ -49,7 +49,7 @@ Sub get_ticker()
         max_incr=0
         max_decr=0
 
-        'Calculate total vol
+'Calculate metrics
         For j = 2 To ticker_count
                     
             'initialize to 0 for each ticker
