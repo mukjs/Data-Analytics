@@ -1,0 +1,61 @@
+.navbar-brand{
+    padding: 15px;
+    margin: 0px;
+    color: white;
+    background-color:black;
+    font-weight: 750;
+    text-align: center;
+  }
+
+.col-md-7{
+    padding: 30px 10px 10px 10px;
+    margin: 10px 20px 10px 40px;
+    background-color:whitesmoke;
+    text-align: center;
+}
+
+.col-md-12{
+  padding: 30px 10px 10px 80px;
+  margin: 40px 40px 40px 40px;
+  background-color:whitesmoke;
+  text-align: left;
+}
+
+.header{
+  color:darkblue;
+  font-weight: 650;
+}
+
+.col-md-4{
+  padding: 30px 10px 10px 10px;
+  margin: 10px 10px 10px 10px;
+  color:darkblue;
+  background-color:whitesmoke;
+  font-weight: 750;
+  text-align: center;
+  border-color: black
+}
+
+.container-fluid{
+  background-color: lightgrey
+}
+
+.content-imgtext{
+  padding: 20px 20px 20px 10px;
+  font-size: medium;
+  text-align: left;
+}  
+
+.content-text{
+  margin: 0px 20px 20px 45px;
+} 
+
+.image{
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px
+}
+
+.csvtable{
+  background-color: white
+}
+
