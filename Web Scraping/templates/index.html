@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mission To Mars</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p>Learn about Mars!!</p>
+      <p><a class="btn btn-primary btn-lg" href="/scraper" role="button">Get Latest Data!</a></p>
+    </div>
+
+
+    {% for mars_data in mars  %}
+
+      <div class="news">
+        <h5>{{mars_data.news_title}}</h5>
+        <p>{{mars_data.news_text}}</p>
+      </div>
+      
+      <div class="featured_image">
+        <h5> NASA Featured Image </h5>
+        <img src= {{mars_data.featured_image}} alt="Mars featured image" height="800x" width="900px">
+      </div> 
+
+      <div class="weather">
+        <h5>Current Weather on Mars</h5>
+        <p>{{mars_data.mars_weather}}</p>
+      </div>
+
+      <div class="table">{{mars_data.mars_facts|safe}}</div>
+
+      <div class="images">
+        {% for dict_item in mars_data.hemispheres %}
+          <p>{{dict_item.title}}</p>
+          <img src={{dict_item.img_url}} alt={{dict_item.title}} height="400x" width="400px" Vspace="50">
+        {% endfor %}
+      </div>
+
+    {% endfor %}
+
+
+  </div>
+
+
+</body>
+
+</html>
