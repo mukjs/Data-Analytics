@@ -32,23 +32,36 @@
     <div class="row">
       </div class="col-md-12">
         <h5> NASA Featured Image </h5>
-        <img src= {{mars_data.featured_image}} alt="Mars featured image" height="600x" width="800px">
+        <img src= {{mars_data.featured_image}} alt="Mars featured image" height="600x" width="800px" Vspace="50">
       </div>
     </div>
 
+  </div>
 
+
+  <div class="container">
     <div class="row">
+      </div class="col-md-12">
         <h5>Current Weather on Mars</h5>
         <p>{{mars_data.mars_weather}}</p>
+      </div>
     </div>
     
-    
+  </div>  
 
+  <div class="container">
     <div class="row">
+      </div class="col-md-12">
+      <h5>Mars Facts</h5>
         {{mars_data.mars_facts|safe}}
+      </div>
     </div>
 
+  </div>
 
+  <div class="container">
+      
+      <h5> Hemispheres  </h5>
     <div class="row">
         {% for dict_item in mars_data.hemispheres %}
           <div class="col-md-6">
@@ -57,11 +70,13 @@
           </div>
         {% endfor %}
     </div>
+  </div>
+
 
     {% endfor %}
 
 
-  </div>
+  
 
 <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
