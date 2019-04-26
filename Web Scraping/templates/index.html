@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <div class="container-fluid">
+  <div class="container">
 
     <div class="jumbotron text-center">
       <h1>Mission to Mars</h1>
@@ -19,37 +19,55 @@
 
 
     {% for mars_data in mars  %}
-
-      <div class="news">
+    
+    <div class="row">
+      <div class="col-md-12">
         <h5>{{mars_data.news_title}}</h5>
         <p>{{mars_data.news_text}}</p>
       </div>
-      
-      <div class="featured_image">
-        <h5> NASA Featured Image </h5>
-        <img src= {{mars_data.featured_image}} alt="Mars featured image" height="800x" width="900px">
-      </div> 
+    </div>
 
-      <div class="weather">
+
+
+    <div class="row">
+      </div class="col-md-12">
+        <h5> NASA Featured Image </h5>
+        <img src= {{mars_data.featured_image}} alt="Mars featured image" height="600x" width="800px">
+      </div>
+    </div>
+
+
+    <div class="row">
         <h5>Current Weather on Mars</h5>
         <p>{{mars_data.mars_weather}}</p>
-      </div>
+    </div>
+    
+    
 
-      <div class="table">{{mars_data.mars_facts|safe}}</div>
+    <div class="row">
+        {{mars_data.mars_facts|safe}}
+    </div>
 
-      <div class="images">
+
+    <div class="row">
         {% for dict_item in mars_data.hemispheres %}
-          <p>{{dict_item.title}}</p>
-          <img src={{dict_item.img_url}} alt={{dict_item.title}} height="400x" width="400px" Vspace="50">
+          <div class="col-md-6">
+            <p>{{dict_item.title}}</p>
+            <img src={{dict_item.img_url}} alt={{dict_item.title}} height="500x" width="500px" Vspace="50">
+          </div>
         {% endfor %}
-      </div>
+    </div>
 
     {% endfor %}
 
 
   </div>
 
-
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>
