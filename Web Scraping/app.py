@@ -42,7 +42,7 @@ def scraper():
 
     # # Redirect back to home page
     return redirect("/")
-    # return ("some shit")
+    
 
 
 if __name__ == "__main__":
