@@ -1,0 +1,44 @@
+h3{
+    color:darkred;
+}
+
+h1{
+    color:black;
+    font-size: 40px;
+}
+
+.jumbotron {
+    background-color:whitesmoke;
+    color:black;
+    border-bottom-color: gray;
+    background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/pia21459.jpg")
+    
+  }
+
+ 
+
+.btn{
+    background-color: chocolate;
+    border-color: black
+}
+
+p {
+    padding-bottom: 30px;
+}
+
+.weather {
+    padding-bottom: 30px;
+}
+
+.mars_facts {
+    padding-bottom: 30px;
+}
+
+img{
+    padding-bottom: 30px;
+}
+
+th {
+    text-align: left;
+    background-color: lightgray
+  }

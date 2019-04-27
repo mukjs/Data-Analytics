@@ -9,26 +9,29 @@ def scrape():
 
 
     #NASA Mars News
-
+    
+    #Using splinter
+    executable_path = {'executable_path': '/usr/local/bin/chromedriver'}
+    browser = Browser('chrome', **executable_path, headless=False)
 
     # URL of page to be scraped
     url = 'https://mars.nasa.gov/news/?page=0&per_page=40&order=publish_date+desc%2Ccreated_at+desc&search=&category=19%2C165%2C184%2C204&blank_scope=Latest'
 
-    # Retrieve page with the requests module
-    response = requests.get(url)
+    browser.visit(url)
+
+    html = browser.html
 
     # Create BeautifulSoup object; parse with 'lxml'
-    soup = BeautifulSoup(response.text, 'lxml')
+    soup = BeautifulSoup(html, 'html.parser')
 
     # Retrieve the parent divs for all articles
-    result = soup.find('div',class_="slide")
+    results = soup.find('li',class_="slide")
 
     #Retrieve article title and paragraph text
     
-    title = result.find('div',class_="content_title").text
-    para_text = result.find('div',class_="rollover_description_inner").text
-
-
+    for result in results:
+        title = result.find('div',class_="content_title").text
+        para_text = result.find('div',class_="rollover_description_inner").text
 
 
     #JPL Mars Space Images - Featured Image
@@ -85,7 +88,7 @@ def scrape():
     df_mars_facts.columns=['Fact','Value']
 
     #convert the data to a HTML table string
-    html_table=df_mars_facts.to_html()
+    html_table=df_mars_facts.to_html(index=False,bold_rows=True)
 
 
 

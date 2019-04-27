@@ -3,70 +3,80 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mission To Mars</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}" type= "text/css">
 </head>
 
 <body>
-  <div class="container">
+  <div class="container-fluid">
 
     <div class="jumbotron text-center">
-      <h1>Mission to Mars</h1>
-      <p>Learn about Mars!!</p>
+      <strong><h1>Mission to Mars</h1></strong>
+      <strong><h5>Learn about Mars!!</h5></strong>
       <p><a class="btn btn-primary btn-lg" href="/scraper" role="button">Get Latest Data!</a></p>
     </div>
 
 
     {% for mars_data in mars  %}
     
-    <div class="row">
-      <div class="col-md-12">
-        <h5>{{mars_data.news_title}}</h5>
-        <p>{{mars_data.news_text}}</p>
+    <div class="news">
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Latest News</h3>
+         <h5>{{mars_data.news_title}}</h5>
+          <p>{{mars_data.news_text}}</p>
+        </div>
       </div>
     </div>
 
 
-
     <div class="row">
+
       </div class="col-md-12">
-        <h5> NASA Featured Image </h5>
-        <img src= {{mars_data.featured_image}} alt="Mars featured image" height="600x" width="800px" Vspace="50">
+        <h3> NASA Featured Image </h3>
+        <img src= {{mars_data.featured_image}} class="img-responsive" style='width:100%;' alt="Mars featured image" Vspace="20">
       </div>
+
     </div>
 
   </div>
 
 
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       </div class="col-md-12">
-        <h5>Current Weather on Mars</h5>
-        <p>{{mars_data.mars_weather}}</p>
+
+        <div class="mars_facts">
+          <h3>Mars Facts</h3>
+          <div class="table text-left" >
+            {{mars_data.mars_facts|safe}}
+          </div>
+        </div>
+
+        <div class="weather">
+          <h3>Current Weather on Mars</h3>
+          <p>{{mars_data.mars_weather}}</p>
+        </div>
+
+
       </div>
     </div>
-    
   </div>  
+   
 
-  <div class="container">
-    <div class="row">
-      </div class="col-md-12">
-      <h5>Mars Facts</h5>
-        {{mars_data.mars_facts|safe}}
-      </div>
-    </div>
 
-  </div>
-
-  <div class="container">
+  <div class="container-fluid">
       
-      <h5> Hemispheres  </h5>
+    <h3> Hemispheres  </h3>
+    <hr>
     <div class="row">
         {% for dict_item in mars_data.hemispheres %}
           <div class="col-md-6">
-            <p>{{dict_item.title}}</p>
-            <img src={{dict_item.img_url}} alt={{dict_item.title}} height="500x" width="500px" Vspace="50">
+            <h5>{{dict_item.title}}</h5>
+            <img src={{dict_item.img_url}} alt={{dict_item.title}} class="img-responsive" style='width:100%;' Vspace="10">
+            <hr>
           </div>
         {% endfor %}
     </div>
