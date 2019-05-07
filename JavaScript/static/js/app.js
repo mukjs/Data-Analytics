@@ -7,13 +7,13 @@ var table_ufo = document. getElementById("ufo-table");
 //List of columns in data
 var columns=["datetime","city","state","country","shape"];
 
-//Store list of unique column values in data for each of columns required for filtering
+//Store list of unique column values from data for each of columns required for filtering
 var unique = columns.map((column) => [... new Set(tableData.map(sighting => sighting[column]))]);
   
 //Store a list of select items where dropdown filters will be added
 var select=columns.map((column) => document.getElementById(column));
 
-//Load dropdown filters and diaplay full data on page load
+//Load dropdown filters and display full data on page load
 window.onload = function () {
 
   //Add these unique items to each of the dropdown filters
@@ -51,10 +51,10 @@ submit.on("click", function() {
     table_ufo. deleteRow(i);
   }
   
-  //Clear stored dropdowns from last submit
+  //Clear stored dropdown selected in previous submit
   var inputValue=[]
 
-  // Get the value property of the dropdown filters
+  // Get the value property of the current dropdown filters
   for (i = 0; i < select.length; i++) {
     inputValue.push(d3.select(`#${columns[i]}`).property("value"));
   }
