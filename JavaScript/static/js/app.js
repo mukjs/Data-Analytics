@@ -4,24 +4,29 @@ var tableData = data;
 //UFOTable 
 var table_ufo = document. getElementById("ufo-table");
 
+//List of columns in data
+var columns=["datetime","city","state","country","shape"];
 
+//Store list of unique column values in data for each of columns required for filtering
+var unique = columns.map((column) => [... new Set(tableData.map(sighting => sighting[column]))]);
+  
+//Store a list of select items where dropdown filters will be added
+var select=columns.map((column) => document.getElementById(column));
+
+//Load dropdown filters and diaplay full data on page load
 window.onload = function () {
 
-  var unique_date=[... new Set(tableData.map(sighting=> sighting.datetime))];
-  var select_date=document.getElementById("datetime");
+  //Add these unique items to each of the dropdown filters
+  var i;
+  for (i = 0; i < unique.length; i++) { 
+    unique[i].forEach((item) => {
+        var option=document.createElement("option");
+        option.text=item;
+        select[i].append(option);
+      })
+  }
 
-  console.log(select_date);
-
-  unique_date.forEach((date) => {
-    var option=document.createElement("option");
-    option.text=date;
-    select_date.append(option);
-  })
-  
-  var date = d3.select("#datetime");
-
-  
-
+ // Display entire table on page load
   var tbody = d3.select("tbody");
   tableData.forEach((sighting) => {
       var row = tbody.append("tr");
@@ -33,9 +38,9 @@ window.onload = function () {
 }
 
 // Select the submit button
-
 var submit = d3.select("#filter-btn");
 
+  //Filter and display data on submit
 submit.on("click", function() {
 
   // Prevent the page from refreshing
@@ -46,19 +51,30 @@ submit.on("click", function() {
     table_ufo. deleteRow(i);
   }
   
+  //Clear stored dropdowns from last submit
+  var inputValue=[]
 
-  var date = d3.select("#datetime");
+  // Get the value property of the dropdown filters
+  for (i = 0; i < select.length; i++) {
+    inputValue.push(d3.select(`#${columns[i]}`).property("value"));
+  }
+    
+  
 
-  // Get the value property of the input element
-  var inputValue = date.property("value");
+  //filter data
+  var j;
+  var filteredData = tableData;
   
-  var filteredData = tableData.filter(sighting => sighting.datetime === inputValue);
-  
-  console.log(filteredData);
+  for (j = 0; j < select.length; j++) {
+      if (inputValue[j]!=="All") {
+        filteredData = filteredData.filter(sighting => sighting[columns[j]] === inputValue[j]); 
+      }
+  }
+
+  // // Finally, display the filtered data in html
 
   var tbody = d3.select("tbody");
 
-    // // Finally, display the filtered data in html
   filteredData.forEach((sighting) => {
     var row = tbody.append("tr");
     Object.entries(sighting).forEach(([key, value]) => {
@@ -66,6 +82,6 @@ submit.on("click", function() {
       cell.text(value);
       });
   });
-
+  
 });
   
