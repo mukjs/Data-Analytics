@@ -5,3 +5,4 @@ Web Scraping/templates/.DS_Store
 Web Scraping/.ipynb_checkpoints/mission_to_mars_MuktaJathar-checkpoint.ipynb
 *.pyc
 .DS_Store
+Plotly/requirements.txt
