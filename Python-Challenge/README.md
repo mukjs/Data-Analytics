@@ -55,7 +55,7 @@ Basic  concepts of Python are used to complete **2** Python Challenges, PyBank a
 
   * The winner of the election based on popular vote.
 
-* The [main file](PyPoll/main_PyBank.py) contains the python script developed for analysis. The analysis looks similar to the one below::
+* The [main file](PyPoll/main_PyPoll.py) contains the python script developed for analysis. The analysis looks similar to the one below::
 
   ```text
   Election Results
