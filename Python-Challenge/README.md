@@ -9,7 +9,7 @@ Basic  concepts of Python are used to complete **2** Python Challenges, PyBank a
 
 ![Revenue](Images/revenue-per-lead.jpg)
 
-* Creating a Python script for analyzing the financial records of a company. Dataset called [budget_data.csv](PyBank/budget_data.csv) is composed of two columns: `Date` and `Profit/Losses`.
+* Creating a Python script for analyzing the financial records of a company. Dataset called [budget_data.csv](PyBank/budget_data.csv) is composed of two columns: `Date` and `Profit/Losses`. 
 
 * Task is to create a Python script that analyzes the records to calculate each of the following:
 
@@ -23,7 +23,7 @@ Basic  concepts of Python are used to complete **2** Python Challenges, PyBank a
 
   * The greatest decrease in losses (date and amount) over the entire period
 
-* The analysis looks similar to the one below:
+* The [main file](PyBank/main_PyBank.py) contains the python script developed for analysis. The analysis looks similar to the one below:
 
   ```text
   Financial Analysis
@@ -55,7 +55,7 @@ Basic  concepts of Python are used to complete **2** Python Challenges, PyBank a
 
   * The winner of the election based on popular vote.
 
-* The analysis looks similar to the one below::
+* The [main file](PyPoll/main_PyBank.py) contains the python script developed for analysis. The analysis looks similar to the one below::
 
   ```text
   Election Results
