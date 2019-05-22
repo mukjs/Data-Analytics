@@ -6,9 +6,11 @@ Use VBA scripting to analyze real stock market data.
 
 ### Files
 
-* [Test Data](Resources/alphabtical_testing.xlsx) - This dataset is smaller and allows to test faster.
+* [Test Data](alphabtical_testing.xlsx) - This dataset is smaller and allows to test faster.
 
-* [Stock Data](StockData_VBAScript_MuktaJ.vbs) - The script developed on test data was then applied to this larger dataset.
+* [Stock Data](Multiple_year_stock_data.xlsm) - The script developed on test data was then applied to this larger dataset.
+
+* [VBA Script](StockData_VBAScript_MuktaJ.vbs) - Copy of the VBA script
 
 ### Stock market analyst
 
