@@ -12,7 +12,7 @@ Use VBA scripting to analyze real stock market data.
 
 * [VBA Script](StockData_VBAScript_MuktaJ.vbs) - Copy of the VBA script
 
-### Stock market analyst
+### Stock market analysis
 
 ![stock Market](Images/stockmarket.jpg)
 
