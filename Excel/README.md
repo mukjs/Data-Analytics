@@ -1,16 +1,16 @@
-# Unit 1 | Assignment - KickStart My Chart
+#  KickStarter analysis using MS Excel
 
 ## Background
 
 Over two billion dollars have been raised using the massively successful crowdfunding service, Kickstarter, but not every project has found success. Of the over 300,000 projects launched on Kickstarter, only a third have made it through the funding process with a positive outcome.
 
-Since getting funded on Kickstarter requires meeting or exceeding the project's initial goal, many organizations spend months looking through past projects in an attempt to discover some trick to finding success. For this week's homework, you will organize and analyze a database of four thousand past projects in order to uncover any hidden trends.
+Since getting funded on Kickstarter requires meeting or exceeding the project's initial goal, many organizations spend months looking through past projects in an attempt to discover some trick to finding success. The task is to organize and analyze a database of four thousand past projects in order to uncover any hidden trends.
 
-## Instructions
+## Analysis
 
 ![Kickstarter Table](Images/FullTable.PNG)
 
-* Using the Excel table provided, you will be modifying and analyzing the data of four thousand past Kickstarter projects as you attempt to uncover some of the market trends.
+* Using the Excel table provided, modifying and analyzing the data of four thousand past Kickstarter projects in an attempt to uncover some of the market trends.
 
 * Use conditional formatting to fill each cell in the `state` column with a different color, depending on whether the associated campaign was "successful," "failed," "cancelled," or is currently "live".
 
@@ -24,17 +24,17 @@ Since getting funded on Kickstarter requires meeting or exceeding the project's 
 
   ![Category Stats](Images/CategoryStats.PNG)
 
-  * Create a new sheet with a pivot table that will analyze your initial worksheet to count how many campaigns were "successful," "failed," "cancelled," or are currently "live" per **category**.
+  * Create a new sheet with a pivot table that will analyze the initial worksheet to count how many campaigns were "successful," "failed," "cancelled," or are currently "live" per **category**.
 
-    * Create a stacked column pivot chart that can be filtered by `country` based on the table you have created.
+    * Create a stacked column pivot chart that can be filtered by `country` based on the table created.
 
   ![Subcategory Stats](Images/SubcategoryStats.PNG)
 
-  * Create a new sheet with a pivot table that will analyze your initial sheet to count how many campaigns were "successful," "failed," "cancelled," or are currently "live" per **sub-category**.
+  * Create a new sheet with a pivot table that will analyze the initial sheet to count how many campaigns were "successful," "failed," "cancelled," or are currently "live" per **sub-category**.
 
-    * Create a stacked column pivot chart that can be filtered by `country` and `parent-category` based on the table you have created.
+    * Create a stacked column pivot chart that can be filtered by `country` and `parent-category` based on the table created.
 
-* The dates stored within the `deadline` and `launched_at` columns are using unix timestamps. Fortunately for us, [there is a formula](http://spreadsheetpage.com/index.php/tip/converting_unix_timestamps/) out there that can be used to convert these timestamps into a normal date.
+* The dates stored within the `deadline` and `launched_at` columns are using unix timestamps,convert these timestamps into a normal date.
 
   * Create a new column named `Date Created Conversion` that will use [this formula](http://spreadsheetpage.com/index.php/tip/converting_unix_timestamps/) to convert the data contained within `launched_at` into Excel's Date format
 
@@ -44,15 +44,8 @@ Since getting funded on Kickstarter requires meeting or exceeding the project's 
 
   * Create a new sheet with a pivot table with a column of `state`, rows of `Date Created Conversion`, values based on the count of `state`, and filters based on `parent category` and `Years`.
 
-  * Now create a pivot chart line graph that visualizes this new table.
+  * Create a pivot chart line graph that visualizes this new table.
 
-* Create a report in Microsoft Word and answer the following questions...
-
-1. What are three conclusions we can make about Kickstarter campaigns given the provided data?
-2. What are some of the limitations of this dataset?
-3. What are some other possible tables/graphs that we could create?
-
-## Bonus
 
 * Create a new sheet with 8 columns: `Goal`, `Number Successful`, `Number Failed`, `Number Canceled`, `Total Projects`, `Percentage Successful`, `Percentage Failed`, and `Percentage Canceled`
 
@@ -79,12 +72,10 @@ Since getting funded on Kickstarter requires meeting or exceeding the project's 
 
   * Create a line chart which graphs the relationship between a goal's amount and its chances at success, failure, or cancellation.
 
-## Submission
 
-* To submit, please upload to Github repo and submit the link to repo to <https://bootcampspot.com/>.
 
-- - -
+* Create a report in Microsoft Word and answer the following questions...
 
-### Copyright
-
-Trilogy Education Services © 2017. All Rights Reserved.
+1. What are three conclusions we can make about Kickstarter campaigns given the provided data?
+2. What are some of the limitations of this dataset?
+3. What are some other possible tables/graphs that we could create?
