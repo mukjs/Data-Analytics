@@ -17,7 +17,7 @@ This repository contains projects and assignments completed as a part of Data An
 * [SQL Alchemy (Python)](SQLAlchemy)
 
 ## Web 
-* [HTML/css](HTML/css)
+* [HTML-css](HTML:css)
 * [Web Scraping - HTML/css,Beautiful Soup,Flask,MongoDb](Web-Scraping)
 
 ## Javascript/Data Visualization
