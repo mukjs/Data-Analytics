@@ -1,0 +1,14 @@
+#Census API Guide
+https://www.census.gov/data/developers/guidance/api-user-guide.Query_Components.html
+
+# All Data Possible
+https://api.census.gov/data.html
+
+# Variables for Employment status
+https://api.census.gov/data/2015/acs/acs1/groups/B23025.html
+
+# All variables possibles for the API in ACS Data
+https://api.census.gov/data/2016/acs/acs1/variables.html
+
+# Address to receive the Data
+https://api.census.gov/data/2016/acs/acs1?get=B01001_001E,NAME&for=state:*&key=My_Key_Here
