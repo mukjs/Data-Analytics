@@ -23,3 +23,7 @@ This repository contains projects and assignments completed as a part of Data An
 ## Javascript/Data Visualization
 * Basic Javascript
 * Plotly
+
+## Projects
+* Project 1 (Group Project)
+* ETL project
