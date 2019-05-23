@@ -4,26 +4,26 @@ This repository contains projects and assignments completed as a part of Data An
 
 ## Excel & VBA
 * [Basic Excel (Filtering, sorting, conditional formating, pivot tables and charts)](Excel)
-* VBA scripting
+* [VBA scripting](VBA)
 
 ## Python
-* Python basics
-* Pandas
-* Matplotlib
-* Python - APIs
+* [Python basics](Python-Challenge)
+* [Pandas](Pandas)
+* [Matplotlib](Matplotlib)
+* [Python - APIs](JSON)
 
 ## SQL
-* SQL
-* SQL Alchemy (Python)
+* [SQL](MySQL)
+* [SQL Alchemy (Python)](SQLAlchemy)
 
-## Web & MongoDb
-* HTML & css
-* Web Scraping (HTML/css,Jinja, Python-Flask, MongoDb)
+## Web 
+* [HTML/css](HTML & Web)
+* [Web Scraping - HTML/css,Beautiful Soup,Flask,MongoDb](Web-Scraping)
 
 ## Javascript/Data Visualization
-* Basic Javascript
-* Plotly
+* [Basic Javascript](JavaScript)
+* [Plotly](Plotly)
 
 ## Projects
-* Project 1 (Group Project)
-* ETL project
+* [Project 1 (Group Project)](Project-1-(Group-Project))
+* [ETL project](ETL-Project)
