@@ -3,7 +3,7 @@
 This repository contains projects and assignments completed as a part of Data Analytics Bootcamp by University of Toronto. Please click on the links below to view in detail.
 
 ## Excel & VBA
-* Basic Excel (Filtering, sorting, conditional formating, pivot tables and charts)
+* [Basic Excel (Filtering, sorting, conditional formating, pivot tables and charts)](Excel)
 * VBA scripting
 
 ## Python
