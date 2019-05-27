@@ -1,11 +1,11 @@
-var svgWidth = 960;
-var svgHeight = 500;
+var svgWidth = 1200;
+var svgHeight = 600;
 
 var margin = {
   top: 20,
   right: 40,
   bottom: 80,
-  left: 100
+  left: 80
 };
 
 var width = svgWidth - margin.left - margin.right;
@@ -102,24 +102,24 @@ function renderLabels(chartLabels, newXScale, chosenXaxis,newYScale, chosenYaxis
 function updateToolTip(chosenXAxis, chosenYAxis,circlesGroup) {
 
   if (chosenXAxis === "poverty") {
-    var xlabel = "In Poverty:";
+    var xlabel = "In Poverty (%) :";
   }
   else {
-    var xlabel = "Age (Median)";
+    var xlabel = "Median Age (yrs)";
   }
 
   if (chosenYAxis === "obesity") {
-    var ylabel = "Obesity:";
+    var ylabel = "Obesity (%) :";
   }
   else {
-    var ylabel = "Smokes";
+    var ylabel = "Smokes (%) ";
   }
 
   var toolTip = d3.tip()
     .attr("class", "tooltip")
     .offset([80, -60])
     .html(function(d) {
-      return (`${d.state}<br>${xlabel} ${d[chosenXAxis]}<br>${ylabel} ${d[chosenYAxis]}`);
+      return (`${d.state}<br>${xlabel} ${d[chosenXAxis]} <br>${ylabel} ${d[chosenYAxis]}`);
     });
 
   circlesGroup.call(toolTip);
@@ -178,8 +178,8 @@ d3.csv("assets/data/data.csv")
     .append("circle")
     .attr("cx", d => xLinearScale(d[chosenXAxis]))
     .attr("cy", d => yLinearScale(d[chosenYAxis]))
-    .attr("r", 12)
-    .attr("fill", "pink")
+    .attr("r", 15)
+    .attr("fill", "coral")
     .attr("opacity", ".5");
 
     var chartLabels=chartGroup.append("g").selectAll("text")
@@ -205,14 +205,14 @@ d3.csv("assets/data/data.csv")
     .attr("y", 20)
     .attr("value", "poverty") // value to grab for event listener
     .classed("active", true)
-    .text("In Poverty");
+    .text("In Poverty (%)");
 
   var ageLabel = xlabelsGroup.append("text")
     .attr("x", 0)
     .attr("y", 40)
     .attr("value", "age") // value to grab for event listener
     .classed("inactive", true)
-    .text("Median age");
+    .text("Median age (yrs)");
 
   // Create group for  2 y- axis labels
   var ylabelsGroup = chartGroup.append("g")
@@ -222,20 +222,20 @@ d3.csv("assets/data/data.csv")
     .attr("transform", "rotate(-90)")
     .attr("y", 0 - margin.left )
     .attr("x", 0 - (height / 2))
-    .attr("dy", "1em")
+    .attr("dy", "2em")
     .attr("value", "obesity") // value to grab for event listener
     .classed("active", true)
-    .text("Obesity");
+    .text("Obesity (%)");
     
 
   var smokesLabel = ylabelsGroup.append("text")
     .attr("transform", "rotate(-90)")
     .attr("y", 0 - margin.left)
     .attr("x", 0 - (height / 2))
-    .attr("dy", "2em")
+    .attr("dy", "3em")
     .attr("value", "smokes") // value to grab for event listener
     .classed("inactive", true)
-    .text("Smokes");
+    .text("Smokes (%)");
 
   // updateToolTip function above csv import
   var circlesGroup = updateToolTip(chosenXAxis,chosenYAxis, circlesGroup);
