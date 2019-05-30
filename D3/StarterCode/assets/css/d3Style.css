@@ -41,8 +41,8 @@
 }
 
 .d3-tip {
-  padding: 6px;
-  font-size: 12px;
+  padding: 2px;
+  font-size: 11px;
   line-height: 1;
   line-height: 1.5em;
   color: #fff;
@@ -54,16 +54,17 @@
 
 .tooltip {
   position: absolute;
-  width: 135px;
-  height: 60px;
+  width: 190px;
+  height: 80px;
   padding: 2px;
   padding-top: 8px;
-  font: 12px sans-serif;
+  font: 11px sans-serif;
   color: black;
   text-align: center;
   background: lightgrey;
   border: 0;
   border-radius: 5px;
+  pointer-events: none;\\
 }
 
 /* Mobile Rules */
