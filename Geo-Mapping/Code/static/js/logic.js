@@ -28,7 +28,7 @@ function chooseColor(mag) {
   case (mag>=4 && mag<5):
     return "#FC4E2A";
   case (mag >= 5):
-    return "E31A1C";
+    return "#E31A1C";
   default:
     return "white";
   }
@@ -56,27 +56,36 @@ d3.json(link, function(data) {
         layer.bindPopup("<h3>" + feature.properties.title + "</h3>");
       },
     
-
-
   }).addTo(map);
-});
 
 
-var legend = L.control({position: 'bottomright'});
+  // Set up the legend
+  var legend = L.control({ position: "bottomright" });
 
-legend.onAdd = function (map) {
-  var div = L.DomUtil.create('div', 'info legend'),
-        grades = [0, 1, 2, 3, 4, 5],
-        labels = [];
+  legend.onAdd = function(map) {
+    var div = L.DomUtil.create("div", "info legend");
+    var grades = [0,1,2,3,4,5];
+    var colors = ['#FFEDA0','#FED976','#FEB24C','#FD8D3C','#FC4E2A','#E31A1C'];
+    // var labels = ["0-1","1-2","2-3","3-4","4-5","5+"];
+
+    // Add min & max
+    var legendInfo = "<h4>Magnitude</h4>";
+    
+    div.innerHTML = legendInfo;
 
     // loop through our density intervals and generate a label with a colored square for each interval
     for (var i = 0; i < grades.length; i++) {
       div.innerHTML +=
-          '<i style="background:' + chooseColor(grades[i] + 1) + '"></i> ' +
+          '<i style="background:' + colors[i] + '"></i> ' +
           grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+          console.log(colors[i]);
   }
 
   return div;
 };
+  
 
-legend.addTo(map);
+  // Adding legend to the map
+  legend.addTo(map);
+
+});
