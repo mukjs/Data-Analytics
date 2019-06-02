@@ -22,6 +22,19 @@ function chooseColor(mag) {
   }
 }
 
+//Plates data
+var datalink = "/data/PB2002_boundaries.json";
+
+var overlayMaps = {};
+
+d3.json(datalink, function(data) {
+  var plates = L.geoJson(data);
+  overlayMaps = {
+    "Tectonic Plates": plates
+  };
+  // console.log(overlayMaps);
+});
+
 // Grabbing our GeoJSON data for earthquake layer..
 d3.json(link, function(data) {
   // Creating a GeoJSON layer with the retrieved data
@@ -48,10 +61,10 @@ d3.json(link, function(data) {
 
 
 // Adding tile layers
-var streetmap = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
+var lightmap = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
   attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
   maxZoom: 18,
-  id: "mapbox.streets",
+  id: "mapbox.light",
   accessToken: API_KEY
 });
 
@@ -64,21 +77,23 @@ var darkmap = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?
 
  // Define a baseMaps object to hold our base layers
  var baseMaps = {
-  "Street Map": streetmap,
+  "Light Map": lightmap,
   "Dark Map": darkmap
 };
 
- // Create overlay object to hold our overlay layer
- var overlayMaps = {
-  Earthquakes: earthquakes
-};
+ // Overlay object to hold our overlay layer
+ overlayMaps.Earthquakes= earthquakes;
 
   // Creating map object
 var map = L.map("map", {
   center: [39.8283, -98.5795],
   zoom: 5,
-  layers: [streetmap, earthquakes]
+  layers: [lightmap, earthquakes]
 });
+
+
+// console.log(overlayMaps);
+
 
 L.control.layers(baseMaps,overlayMaps, {
   collapsed: false
@@ -105,7 +120,7 @@ legend.onAdd = function(map) {
       div.innerHTML +=
           '<i style="background:' + colors[i] + '"></i> ' +
           grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
-          console.log(colors[i]);
+          // console.log(colors[i]);
    }
 
   return div;
@@ -116,3 +131,5 @@ legend.onAdd = function(map) {
   legend.addTo(map);
 
 });
+
+
