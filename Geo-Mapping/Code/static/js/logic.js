@@ -1,17 +1,5 @@
-// Creating map object
-var map = L.map("map", {
-  center: [39.8283, -98.5795],
-  zoom: 5
-});
 
-// Adding tile layer
-L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
-  attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
-  maxZoom: 18,
-  id: "mapbox.streets",
-  accessToken: API_KEY
-}).addTo(map);
-
+// Link for earthquake data
 var link = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
 
 // determine color of markers
@@ -34,12 +22,10 @@ function chooseColor(mag) {
   }
 }
 
-
-
-// Grabbing our GeoJSON data..
+// Grabbing our GeoJSON data for earthquake layer..
 d3.json(link, function(data) {
   // Creating a GeoJSON layer with the retrieved data
-  L.geoJson(data,{
+  var earthquakes=L.geoJson(data,{
 
 
       pointToLayer: function(feature, latlng) {
@@ -55,14 +41,55 @@ d3.json(link, function(data) {
       onEachFeature: function(feature, layer) {
         layer.bindPopup("<h3>" + feature.properties.title + "</h3>");
       },
+
     
-  }).addTo(map);
+  })
 
 
-  // Set up the legend
-  var legend = L.control({ position: "bottomright" });
 
-  legend.onAdd = function(map) {
+// Adding tile layers
+var streetmap = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
+  attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
+  maxZoom: 18,
+  id: "mapbox.streets",
+  accessToken: API_KEY
+});
+
+var darkmap = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
+    attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
+    maxZoom: 18,
+    id: "mapbox.dark",
+    accessToken: API_KEY
+  });
+
+ // Define a baseMaps object to hold our base layers
+ var baseMaps = {
+  "Street Map": streetmap,
+  "Dark Map": darkmap
+};
+
+ // Create overlay object to hold our overlay layer
+ var overlayMaps = {
+  Earthquakes: earthquakes
+};
+
+  // Creating map object
+var map = L.map("map", {
+  center: [39.8283, -98.5795],
+  zoom: 5,
+  layers: [streetmap, earthquakes]
+});
+
+L.control.layers(baseMaps,overlayMaps, {
+  collapsed: false
+}).addTo(map);
+
+
+
+// Set up the legend
+var legend = L.control({ position: "bottomright" });
+
+legend.onAdd = function(map) {
     var div = L.DomUtil.create("div", "info legend");
     var grades = [0,1,2,3,4,5];
     var colors = ['#FFEDA0','#FED976','#FEB24C','#FD8D3C','#FC4E2A','#E31A1C'];
@@ -79,7 +106,7 @@ d3.json(link, function(data) {
           '<i style="background:' + colors[i] + '"></i> ' +
           grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
           console.log(colors[i]);
-  }
+   }
 
   return div;
 };
