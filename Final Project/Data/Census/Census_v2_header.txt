@@ -1,0 +1,66 @@
+2016 Census Profiles Files / Profile of Census Disseminations Areas
+COL0 - GEO UID
+COL1 - Population and dwelling counts / Population, 2016
+COL2 - Age & Sex - Both sexes / Average age of the population ; Both sexes
+COL3 - Age & Sex - Both sexes / Total - Distribution (%) of the population by broad age groups - 100% data ; Both sexes / 0 to 14 years ; Both sexes
+COL4 - Age & Sex - Both sexes / Total - Distribution (%) of the population by broad age groups - 100% data ; Both sexes / 15 to 64 years ; Both sexes
+COL5 - Age & Sex - Both sexes / Total - Distribution (%) of the population by broad age groups - 100% data ; Both sexes / 65 years and over ; Both sexes
+COL6 - Dwelling characteristics / Average household size
+COL7 - Dwelling characteristics / Total - Occupied private dwellings by structural type of dwelling - 100% data
+COL8 - Dwelling characteristics / Total - Occupied private dwellings by structural type of dwelling - 100% data / Single-detached house
+COL9 - Dwelling characteristics / Total - Occupied private dwellings by structural type of dwelling - 100% data / Apartment in a building that has five or more storeys
+COL10 - Dwelling characteristics / Total - Occupied private dwellings by structural type of dwelling - 100% data / Other attached dwelling
+COL11 - Marital Status - Both Sexes / Total - Marital status for the population aged 15 years and over - 100% data ; Both sexes / Married or living common law ; Both sexes
+COL12 - Marital Status - Both Sexes / Total - Marital status for the population aged 15 years and over - 100% data ; Both sexes / Not married and not living common law ; Both sexes
+COL13 - Knowledge of official language - Both sexes / Total - Knowledge of official languages for the total population excluding institutional residents - 100% data ; Both sexes / English only ; Both sexes
+COL14 - Knowledge of official language - Both sexes / Total - Knowledge of official languages for the total population excluding institutional residents - 100% data ; Both sexes / French only ; Both sexes
+COL15 - Knowledge of official language - Both sexes / Total - Knowledge of official languages for the total population excluding institutional residents - 100% data ; Both sexes / English and French ; Both sexes
+COL16 - Knowledge of official language - Both sexes / Total - Knowledge of official languages for the total population excluding institutional residents - 100% data ; Both sexes / Neither English nor French ; Both sexes
+COL17 - Income - Total Sex / Total - Income statistics in 2015 for private households by household size - 100% data / Median total income of households in 2015 ($)
+COL18 - Immigration - Total Sex / Total - Citizenship for the population in private households - 25% sample data / Canadian citizens
+COL19 - Immigration - Total Sex / Total - Citizenship for the population in private households - 25% sample data / Not Canadian citizens
+COL20 - Immigration - Total Sex / Total - Immigrant status and period of immigration for the population in private households - 25% sample data / Non-immigrants
+COL21 - Immigration - Total Sex / Total - Immigrant status and period of immigration for the population in private households - 25% sample data / Immigrants
+COL22 - Immigration - Total Sex / Total - Immigrant status and period of immigration for the population in private households - 25% sample data / Immigrants / Before 1981
+COL23 - Immigration - Total Sex / Total - Immigrant status and period of immigration for the population in private households - 25% sample data / Immigrants / 1981 to 1990
+COL24 - Immigration - Total Sex / Total - Immigrant status and period of immigration for the population in private households - 25% sample data / Immigrants / 1991 to 2000
+COL25 - Immigration - Total Sex / Total - Immigrant status and period of immigration for the population in private households - 25% sample data / Immigrants / 2001 to 2010
+COL26 - Immigration - Total Sex / Total - Immigrant status and period of immigration for the population in private households - 25% sample data / Immigrants / 2011 to 2016
+COL27 - Immigration - Total Sex / Total - Immigrant status and period of immigration for the population in private households - 25% sample data / Non-permanent residents
+COL28 - Immigration - Total Sex / Total - Selected places of birth for the immigrant population in private households - 25% sample data
+COL29 - Immigration - Total Sex / Total - Selected places of birth for the immigrant population in private households - 25% sample data / Americas
+COL30 - Immigration - Total Sex / Total - Selected places of birth for the immigrant population in private households - 25% sample data / Europe
+COL31 - Immigration - Total Sex / Total - Selected places of birth for the immigrant population in private households - 25% sample data / Africa
+COL32 - Immigration - Total Sex / Total - Selected places of birth for the immigrant population in private households - 25% sample data / Asia
+COL33 - Immigration - Total Sex / Total - Selected places of birth for the immigrant population in private households - 25% sample data / Oceania and other places of birth
+COL34 - Housing - Total Sex / Total - Private households by tenure - 25% sample data
+COL35 - Housing - Total Sex / Total - Private households by tenure - 25% sample data / Owner
+COL36 - Housing - Total Sex / Total - Private households by tenure - 25% sample data / Renter
+COL37 - Housing - Total Sex / Total - Private households by tenure - 25% sample data / Band housing
+COL38 - Ethnic Origin - Total Sex / Total - Ethnic origin for the population in private households - 25% sample data
+COL39 - Ethnic Origin - Total Sex / Total - Ethnic origin for the population in private households - 25% sample data / North American Aboriginal origins
+COL40 - Ethnic Origin - Total Sex / Total - Ethnic origin for the population in private households - 25% sample data / Other North American origins
+COL41 - Ethnic Origin - Total Sex / Total - Ethnic origin for the population in private households - 25% sample data / European origins
+COL42 - Ethnic Origin - Total Sex / Total - Ethnic origin for the population in private households - 25% sample data / European origins / French origins
+COL43 - Ethnic Origin - Total Sex / Total - Ethnic origin for the population in private households - 25% sample data / European origins / Western European origins (except French origins)
+COL44 - Ethnic Origin - Total Sex / Total - Ethnic origin for the population in private households - 25% sample data / Caribbean origins
+COL45 - Ethnic Origin - Total Sex / Total - Ethnic origin for the population in private households - 25% sample data / Latin, Central and South American origins
+COL46 - Ethnic Origin - Total Sex / Total - Ethnic origin for the population in private households - 25% sample data / African origins
+COL47 - Ethnic Origin - Total Sex / Total - Ethnic origin for the population in private households - 25% sample data / African origins / North African origins
+COL48 - Ethnic Origin - Total Sex / Total - Ethnic origin for the population in private households - 25% sample data / African origins / Southern and East African origins
+COL49 - Ethnic Origin - Total Sex / Total - Ethnic origin for the population in private households - 25% sample data / African origins / Other African origins
+COL50 - Ethnic Origin - Total Sex / Total - Ethnic origin for the population in private households - 25% sample data / Asian origins
+COL51 - Ethnic Origin - Total Sex / Total - Ethnic origin for the population in private households - 25% sample data / Oceania origins
+COL52 - Education - Total Sex / Total - Highest certificate, diploma or degree for the population aged 15 years and over in private households - 25% sample data
+COL53 - Education - Total Sex / Total - Highest certificate, diploma or degree for the population aged 15 years and over in private households - 25% sample data / No certificate, diploma or degree
+COL54 - Education - Total Sex / Total - Highest certificate, diploma or degree for the population aged 15 years and over in private households - 25% sample data / Secondary (high) school diploma or equivalency certificate
+COL55 - Education - Total Sex / Total - Highest certificate, diploma or degree for the population aged 15 years and over in private households - 25% sample data / Postsecondary certificate, diploma or degree
+COL56 - Education - Total Sex / Total - Highest certificate, diploma or degree for the population aged 15 years and over in private households - 25% sample data / Postsecondary certificate, diploma or degree / Apprenticeship or trades certificate or diploma
+COL57 - Education - Total Sex / Total - Highest certificate, diploma or degree for the population aged 15 years and over in private households - 25% sample data / Postsecondary certificate, diploma or degree / College, CEGEP or other non-university certificate or diploma
+COL58 - Education - Total Sex / Total - Highest certificate, diploma or degree for the population aged 15 years and over in private households - 25% sample data / Postsecondary certificate, diploma or degree / University certificate or diploma below bachelor level
+COL59 - Education - Total Sex / Total - Highest certificate, diploma or degree for the population aged 15 years and over in private households - 25% sample data / Postsecondary certificate, diploma or degree / University certificate, diploma or degree at bachelor level or above
+COL60 - Labour - Total Sex / Total - Population aged 15 years and over by Labour force status - 25% sample data
+COL61 - Labour - Total Sex / Total - Population aged 15 years and over by Labour force status - 25% sample data / In the labour force
+COL62 - Labour - Total Sex / Total - Population aged 15 years and over by Labour force status - 25% sample data / In the labour force / Employed
+COL63 - Labour - Total Sex / Total - Population aged 15 years and over by Labour force status - 25% sample data / In the labour force / Unemployed
+COL64 - Labour - Total Sex / Total - Population aged 15 years and over by Labour force status - 25% sample data / Not in the labour force
