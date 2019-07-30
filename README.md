@@ -28,6 +28,5 @@ This repository contains projects and assignments completed as a part of Data An
 
 ## Projects
 * [Investigation into mental health in the US by state](https://github.com/mukjs/Data-Analytics/tree/master/Project%201%20(Group%20Project))
-* [ETL project](ETL-Project)
 * [Value of Vote Flask App](https://github.com/MichaelWStein/Data)
 * [Public Schools in Ontario](https://github.com/mukjs/Data-Analytics/tree/master/Final%20Project)
